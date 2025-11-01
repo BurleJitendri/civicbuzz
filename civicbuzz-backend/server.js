@@ -14,7 +14,7 @@ const app = express();
 
 // ✅ Middleware
 app.use(cors({
-  origin: "https://civicbuzz-frontend.netlify.app", // your deployed frontend
+  origin: "https://civicbuzz-frontend.netlify.app/", // your deployed frontend
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   credentials: true,
 }));
