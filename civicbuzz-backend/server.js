@@ -13,7 +13,11 @@ dotenv.config();
 const app = express();
 
 // ✅ Middleware
-app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: "https://civicbuzz-frontend.netlify.app", // your deployed frontend
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  credentials: true,
+}));
 app.use(express.json());
 app.use("/api/chat", chatRoutes);
 
